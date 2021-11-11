@@ -1,2 +1,2 @@
-# chickenhunt
-RGTI naloga 1
+# README
+RGTI naloga 1 Chicken Hunt
