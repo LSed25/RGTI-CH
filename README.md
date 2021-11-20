@@ -1,2 +1,4 @@
 # README
 RGTI naloga 1 Chicken Hunt
+
+-TEKSTURA JE SAMO ZA TEST
