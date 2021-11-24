@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+            .container {
+                position: relative;
+                text-align: center;
+                color: white;
+            }
+            .centered {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .right {
+                position: absolute;
+                top: 50%;
+                left: 70%;
+                transform: translate(-50%, -50%);
+            }
+    </style>
+
     <title>Chicken Hunt - RGTI</title>
 
-    <link rel="stylesheet" type="text/css" href="../../common/style.css">
+    <link rel="stylesheet" type="text/css" href="../common/style.css">
 
+    <script type="text/javascript" src="../lib/gl-matrix-min.js"></script>
+    <script type="text/javascript" src="../lib/dat.gui.min.js"></script>
+    <script type="module" src="Game.js"></script>
+    <!--<a class="Start" href="game.html">Start</a>-->
+    
 </head>
-<style>
-    .Start {
-        position: fixed;
-    }
-    h1 {
-        position: center;
-    }
-</style>
 <body>
-    <h1>Chicken Hunt</h1>
-    <a class="Start" href="game.html">Start</a>
+    <div class="fullscreen">
+        <div id = "starting_screen">
+            <input class="right" type="image" src="../common/images/igraj.png" id="playbutton" width="400" height="200">
+            <img class="fullscreen" src="../common/images/canvas.png">
+        </div>
+        <div align="center" style="font-size: 25px" id="killed_screen">
+            <img class="fullscreen" src="../common/images/end.png">
+        </div>
+        <div align="center" style="font-size: 25px" id="won_screen">
+            <img class="fullscreen" src="../common/images/zmaga.png">
+        </div>
+        <canvas></canvas>
+    </div>
 </body>
 </html>
