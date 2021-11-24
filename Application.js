@@ -1,4 +1,4 @@
-export class Application {
+export default class Application {
 
     constructor(canvas, glOptions) {
         this._update = this._update.bind(this);

@@ -1,4 +1,4 @@
-export class SceneLoader {
+export default class SceneLoader {
 
     async loadScene(uri) {
         const scene = await this.loadJson(uri);

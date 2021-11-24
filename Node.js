@@ -1,7 +1,10 @@
-import { vec3, mat4, quat } from '../../lib/gl-matrix-module.js';
-import { Utils } from './Utils.js';
+import Utils from './Utils.js';
 
-export class Node {
+const vec3 = glMatrix.vec3;
+const mat4 = glMatrix.mat4;
+const quat = glMatrix.quat;
+
+export default class Node {
 
     constructor(options) {
         Utils.init(this, Node.defaults, options);

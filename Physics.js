@@ -1,6 +1,6 @@
-import { vec3, mat4 } from '../../lib/gl-matrix-module.js';
-
-export class Physics {
+const vec3 = glMatrix.vec3;
+const mat4 = glMatrix.mat4;
+export default class Physics {
 
     constructor(scene) {
         this.scene = scene;

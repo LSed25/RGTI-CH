@@ -1,4 +1,4 @@
-export class Utils {
+export default class Utils {
 
     static init(object, defaults, options) {
         let filtered = Utils.clone(options || {});

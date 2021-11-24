@@ -1,6 +1,6 @@
 var active = false;
 
-export function start_timer() {
+export default function start_timer() {
     var countDownDate = new Date(Date.now() + (2 * 60 * 1000));
 
     var x = setInterval(function() {
