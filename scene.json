@@ -56,9 +56,11 @@
     }
   ],
   "textures": [
-    "../../common/images/floor.png"
+    "../../common/images/floor.png",
+    "../../common/images/fox.png"
   ],
   "meshes": [
-    "../../common/models/cube.json"
+    "../../common/models/cube.json",
+    "../../common/models/fox.json"
   ]
 }
