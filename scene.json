@@ -56,7 +56,7 @@
     }
   ],
   "textures": [
-    "../../common/images/test.png"
+    "../../common/images/floor.png"
   ],
   "meshes": [
     "../../common/models/cube.json"

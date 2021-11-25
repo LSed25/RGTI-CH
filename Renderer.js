@@ -1,4 +1,4 @@
-import * as WebGL from './WebGL.js';
+import { WebGL } from './WebGL.js';
 import shaders from './shaders.js';
 
 const mat4 = glMatrix.mat4;

@@ -5,7 +5,7 @@ import Physics from './Physics.js';
 import Camera from './Camera.js';
 import SceneLoader from './SceneLoader.js';
 import SceneBuilder from './SceneBuilder.js';
-import changeState from "./Timer.js";
+import { changeState } from "./Timer.js";
 
 
 class App extends Application {
