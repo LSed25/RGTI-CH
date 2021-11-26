@@ -13,7 +13,11 @@
 .overlay {
     display: inline-block;
     background-color: #fdfd96;
-    width: 45%;
+    width: 48%;
     padding-left: 20px;
     padding-bottom: 15px;
 }
+@font-face{
+    font-family: "Krungthep";
+    src: url("../fonts/Krungthep.ttf") format("truetype");
+  }
