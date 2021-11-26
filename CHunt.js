@@ -5,7 +5,7 @@ import Physics from './Physics.js';
 import Camera from './Camera.js';
 import SceneLoader from './SceneLoader.js';
 import SceneBuilder from './SceneBuilder.js';
-import { timer } from "./Timer.js";
+//import { timer } from "./Timer.js";
 
 
 class App extends Application {
@@ -96,6 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.querySelector('canvas');
     const app = new App(canvas);
     const gui = new dat.GUI();
-    timer();
+    //timer();
     gui.add(app, 'enableCamera');
 });
