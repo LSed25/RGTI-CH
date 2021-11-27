@@ -23,5 +23,5 @@
 }
 @font-face{
     font-family: "Krungthep";
-    src: url("../fonts/Krungthep.ttf") format("truetype");
+    src: url('../common/fonts/Krungthep.ttf') format("truetype");
   }

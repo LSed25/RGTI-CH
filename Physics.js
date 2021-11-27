@@ -1,4 +1,5 @@
 import { count } from './Timer.js';
+import { check } from './Timer.js';
 
 const vec3 = glMatrix.vec3;
 const mat4 = glMatrix.mat4;
@@ -89,8 +90,14 @@ export default class Physics {
             minDirection = [0, 0, -minDiff];
         }
 
-        if( b.aabb.max[0] == 0.5 ) {
+        if( b.aabb.max[0] == 0.1 ) {
             count();
+            b.translation[1] = -4;
+            b.updateTransform();
+        }
+
+        if( b.aabb.max[0] == 0.4 ) {
+            check();
             b.translation[1] = -4;
             b.updateTransform();
         }

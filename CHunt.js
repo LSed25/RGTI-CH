@@ -5,7 +5,7 @@ import Physics from './Physics.js';
 import Camera from './Camera.js';
 import SceneLoader from './SceneLoader.js';
 import SceneBuilder from './SceneBuilder.js';
-//import { timer } from "./Timer.js";
+import { timer } from "./Timer.js";
 
 
 class App extends Application {
@@ -45,6 +45,14 @@ class App extends Application {
     }
 
     enableCamera() {
+        this.camera.enable();
+        this.canvas.click();
+    }
+
+    canvasClickListener() {
+        this.canvas.requestPointerLock = this.canvas.requestPointerLock ||
+        this.canvas.mozRequestPointerLock ||
+        this.canvas.webkitRequestPointerLock;
         this.canvas.requestPointerLock();
     }
 
@@ -90,12 +98,27 @@ class App extends Application {
         }
     }
 
+    audio() {
+        const music = new Audio("../../common/audio/music.mp3");
+        music.volume = 0.05;
+        music.loop = true;
+        music.load();
+        music.play();
+    }
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.querySelector('canvas');
     const app = new App(canvas);
-    const gui = new dat.GUI();
+    //const gui = new dat.GUI();
+    //gui.add(app, 'enableCamera');
     //timer();
-    gui.add(app, 'enableCamera');
+    //app.audio();
+    setTimeout(function() {
+        canvas.addEventListener('click', app.canvasClickListener.bind(app), false);
+        app.enableCamera();
+        timer();
+        app.audio();
+      }, 2000);
 });

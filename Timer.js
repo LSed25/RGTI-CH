@@ -3,7 +3,7 @@ let counter = 0;
 let numChicken = 10;
 let overall = 10;
 export default function start_timer() {
-    var countDownDate = new Date(Date.now() + (1 * 60 * 1000));
+    var countDownDate = new Date(Date.now() + (2 * 60 * 1000));
 
     var x = setInterval(function() {
         var now = new Date(Date.now());
@@ -35,6 +35,9 @@ export function count() {
     document.getElementById("counter").innerHTML = counter;
     numChicken--;
     document.getElementById("chickens").innerHTML = numChicken;
+    if(counter == overall) {
+        document.getElementById("text").innerHTML = "Cas da zapustis hlev!";
+    }
 }
 
 export function check() {

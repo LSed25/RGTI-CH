@@ -21,6 +21,11 @@ export default class SceneBuilder {
                 const texture = this.spec.textures[spec.texture];
                 return new Model(mesh, texture, spec);
             }
+            case 'skybox': {
+                const mesh = new Mesh(this.spec.meshes[spec.mesh]);
+                const texture = this.spec.textures[spec.texture];
+                return new Skybox(mesh, texture, spec);
+            }
             default: return new Node(spec);
         }
     }
