@@ -2,6 +2,7 @@ var active = false;
 let counter = 0;
 let numChicken = 10;
 let overall = 10;
+let chicken = new Audio('../../common/audio/chicken.mp3');
 export default function start_timer() {
     var countDownDate = new Date(Date.now() + (2 * 60 * 1000));
 
@@ -35,6 +36,8 @@ export function count() {
     document.getElementById("counter").innerHTML = counter;
     numChicken--;
     document.getElementById("chickens").innerHTML = numChicken;
+    chicken.volume = 0.1;
+    chicken.play();
     if(counter == overall) {
         document.getElementById("text").innerHTML = "Cas da zapustis hlev!";
     }
